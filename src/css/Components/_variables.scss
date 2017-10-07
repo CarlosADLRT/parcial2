@@ -1,0 +1,59 @@
+// COLORS
+$teal-blue: #007ba7;
+$charcoal-grey: #2f313b;
+$bt-black: #0f222e;
+$bt-white: #f2f2f2;
+$white-two: #eaeaea;
+$mustard: #dcad00;
+$apple-green: #6ebc18;
+$soft-green: #e2f2d1;
+$sand: #e3cc75;
+$red: #e15d5d;
+$grey: #97989d;
+$white-three: #fbfbfb;
+
+$bt-theme-colors :(
+  primary: $teal-blue,
+  secondary: $charcoal-grey,
+  success: $apple-green,
+  info: $sand,
+  warning: $mustard,
+  danger: $red,
+  light: $white-two,
+  dark: $bt-black
+);
+
+// FONTS
+$bt-font-base: 16px;
+$bt-font-x-large: 28px;
+$bt-font-large: 24px;
+$bt-font-medium: 18px;
+$bt-font-small: 14px;
+$bt-font-x-small: 12px;
+$bt-font-tiny: 10px;
+
+// FONTS FAMILY
+$font-family-base: 'Raleway', sans-serif;
+
+// FONT WEIGHT
+$bt-font-bold: 700;
+$bt-font-regular: 300;
+
+// LINE-HEIGHT
+$bt-line-height-base: 19px;
+$bt-line-height-x-large: 33px;
+$bt-line-height-large: 29px;
+$bt-line-height-medium: 21px;
+$bt-line-height-small: 16px;
+$bt-line-height-x-small: 14px;
+$bt-line-height-tiny: 11px;
+
+// BORDER RADIUS
+$bt-border-radius-base: 50px;
+
+// PADDING
+$padding-base: 20px;
+$padding-half: $padding-base/2;
+
+// VENDORS
+$fa-font-path : '../node_modules/font-awesome/fonts';

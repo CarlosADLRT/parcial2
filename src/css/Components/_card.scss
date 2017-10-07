@@ -1,0 +1,105 @@
+.card {
+  border-color: $white-two;
+}
+
+%card-bootcamp {
+  @extend .card;
+  box-shadow: 0 2px 4px 0 rgba(47, 49, 59, 0.1);
+  margin-bottom: 25px;
+
+  .card-title {
+    padding: 15px;
+    font-size: $bt-font-base;
+    line-height: $bt-line-height-base;
+    font-weight: $bt-font-bold;
+  }
+  .card-header,
+  .card-body {
+    padding: 25px 35px;
+  }
+  .card-header,
+  .card-footer {
+    background-color: transparent;
+  }
+
+  .card-banner {
+    background-color: $teal-blue;
+    background-size: cover;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
+  }
+
+  .card-banner:first-child {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+
+  .card-header--no-border,
+  .card-footer--no-border {
+    border: none;
+  }
+
+  .list-group-item {
+    background-color:  transparent;
+  }
+
+  .card-body-border-bottom {
+    border-bottom: 1px solid $white-two;
+  }
+}
+
+.card-bootcamp {
+  @extend %card-bootcamp;
+  border-color: transparent;
+  &--bg-white-two{
+    background-color: $white-two;
+  }
+}
+
+.card-bootcamp-sm {
+  @extend .card-bootcamp;
+  .card-body {
+    padding: 25px 20px;
+  }
+}
+
+.card-bootcamp-primary {
+  @extend .card-bootcamp;
+  border-color: $teal-blue;
+  .card-title {
+    color: #FFF;
+  }
+}
+.card-bootcamp--no-shadow{
+  box-shadow: none;
+}
+
+.card-bootcamp--border-dashed {
+  border: 1px dashed $charcoal-grey;
+  border-radius: 5px;
+}
+
+.card-bootcamp-reply-img{
+  width: 35px;
+  height: 35px;
+  border: solid 2px $teal-blue;
+  border-radius: 100px;
+}
+
+.card-bootcamp-dark {
+  @extend %card-bootcamp;
+  color: #FFF;
+  border: none;
+  background-color: $charcoal-grey;
+  .card-title {
+    background: transparentize($white-two, 0.8);
+  }
+  .list-group-item {
+    margin-bottom: auto;
+    border-color: transparentize($white-two, 0.8);
+  }
+}

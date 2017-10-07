@@ -1,0 +1,93 @@
+.navbar-main {
+  @extend .navbar;
+  @extend .navbar-expand-lg;
+  @extend .navbar-dark;
+  background-color: $charcoal-grey;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
+  padding: 15px 15px;
+
+  @include media-breakpoint-up(md) {
+    @supports (position: sticky) {
+      position: sticky;
+      top: 0;
+      z-index: 1020; // over everything in bootstrap
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    min-height: 4rem;
+    align-items: stretch;
+    padding: 0 0 0 15px;
+  }
+
+  .navbar-brand {
+    align-self: center;
+  }
+
+  .navbar-nav {
+    .nav-link {
+      padding-right: .5rem;
+      padding-left: .5rem;
+      color: #FFF;
+
+      &.active,
+      &:hover {
+        color: $mustard;;
+        background-color: transparent;
+      }
+
+      &.active {
+        font-weight: 500;
+      }
+    }
+  }
+
+  .navbar-user {
+    display: none;
+    background-color: $bt-black;
+    color: $bt-white;
+    @extend .d-lg-flex;
+    @extend .align-self-lg-stretch;
+    @extend .align-items-lg-center;
+
+
+    &__img {
+      width: 45px;
+      height: 45px;
+      margin-left: 15px;
+      border-radius: 50px;
+    }
+
+
+    &__wrapper {
+      padding: 0 25px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+
+    .dropdown-menu {
+      margin-top: 10px;
+      left: auto !important;
+      right: 10px;
+      border-color: $white;
+      width: 210px;
+      &.show:after {
+        content: '';
+        display: block;
+        border: 8px solid $white;
+        border-top: 0;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        top: -10px;
+        right: 45px;
+      }
+    }
+
+  }
+}
